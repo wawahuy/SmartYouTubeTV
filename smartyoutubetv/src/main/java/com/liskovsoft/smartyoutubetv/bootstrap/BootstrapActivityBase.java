@@ -13,7 +13,7 @@ import com.liskovsoft.smartyoutubetv.misc.LangUpdater;
 import com.liskovsoft.smartyoutubetv.misc.OldPackageRemover;
 import com.liskovsoft.smartyoutubetv.prefs.SmartPreferences;
 
-public abstract class BootstrapActivityBase extends ExceptionBootstrapActivity {
+public abstract class BootstrapActivityBase extends com.liskovsoft.smartyoutubetv.bootstrap.ExceptionBootstrapActivity {
     private static final String TAG = BootstrapActivityBase.class.getSimpleName();
 
     @Override

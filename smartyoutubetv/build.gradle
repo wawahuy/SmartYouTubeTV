@@ -185,45 +185,48 @@ android {
         lintConfig rootProject.file('lint.xml')
     }
 
-    // FIX: Product Flavor: Duplicate class found.
-    // Create common folder for duplicate classes.
-    // More info: https://stackoverflow.com/questions/37439120/product-flavor-duplicate-class-found
-    sourceSets {
-        def commonDirs = ['src/commonSrc/appWatcher/java', 'src/commonSrc/crashHandler/java']
-        orig {
-            java.srcDirs('src/commonSrc/crashHandler/java')
-        }
-        Vtesting {
-            java.srcDirs = commonDirs
-        }
-        Vlitemain {
-            java.srcDirs = commonDirs
-        }
-        Vlitealt {
-            java.srcDirs = commonDirs
-        }
-        Vkids {
-            java.srcDirs = commonDirs
-        }
-        Vlive {
-            java.srcDirs = commonDirs
-        }
-        Vnovotelecom {
-            java.srcDirs = commonDirs
-        }
-        // Vistargroups {
-        //     java.srcDirs('src/commonSrc/appWatcher/java')
-        // }
-        Vrtarmenia {
-            java.srcDirs = commonDirs
-        }
-        Vrtarmenia2 {
-            java.srcDirs = commonDirs
-        }
-        Vunoiptv {
-            java.srcDirs = commonDirs
-        }
-    }
+    // Fix on android studio
+    // More info: https://stackoverflow.com/questions/22615543/android-studio-sourcesets-error-same-file-folder
+    // ---------------------
+//    // FIX: Product Flavor: Duplicate class found.
+//    // Create common folder for duplicate classes.
+//    // More info: https://stackoverflow.com/questions/37439120/product-flavor-duplicate-class-found
+//    sourceSets {
+//        def commonDirs = ['src/commonSrc/appWatcher/java', 'src/commonSrc/crashHandler/java']
+//        orig {
+//            java.srcDirs('src/commonSrc/crashHandler/java')
+//        }
+//        Vtesting {
+//            java.srcDirs = commonDirs
+//        }
+//        Vlitemain {
+//            java.srcDirs = commonDirs
+//        }
+//        Vlitealt {
+//            java.srcDirs = commonDirs
+//        }
+//        Vkids {
+//            java.srcDirs = commonDirs
+//        }
+//        Vlive {
+//            java.srcDirs = commonDirs
+//        }
+//        Vnovotelecom {
+//            java.srcDirs = commonDirs
+//        }
+//        // Vistargroups {
+//        //     java.srcDirs('src/commonSrc/appWatcher/java')
+//        // }
+//        Vrtarmenia {
+//            java.srcDirs = commonDirs
+//        }
+//        Vrtarmenia2 {
+//            java.srcDirs = commonDirs
+//        }
+//        Vunoiptv {
+//            java.srcDirs = commonDirs
+//        }
+//    }
 }
 
 dependencies {

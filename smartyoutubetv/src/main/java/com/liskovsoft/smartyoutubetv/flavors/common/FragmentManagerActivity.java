@@ -36,7 +36,7 @@ import com.liskovsoft.smartyoutubetv.voicesearch.VoiceSearchBusBridge;
 
 import java.util.HashMap;
 
-public abstract class FragmentManagerActivity extends CrashHandlerActivity implements FragmentManager {
+public abstract class FragmentManagerActivity extends com.liskovsoft.smartyoutubetv.flavors.common.CrashHandlerActivity implements FragmentManager {
     private static final String TAG = FragmentManagerActivity.class.getSimpleName();
     private KeyEvent mEvent;
     private GenericFragment mActiveFragment;
